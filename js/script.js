@@ -35,82 +35,14 @@ function data () {
     //Objeto Date
     let date = new Date();
 
-    //Variáveis
-    let diaDaSemana, diaDoMes, mes;
-
     //Verifica qual o dia atual da semana e retorna por escrito
-    diaDaSemana = date.getDay();
-    switch (diaDaSemana) {
-        case 0:
-            diaDaSemana = "domingo";
-            break;
-        case 1:
-            diaDaSemana = "segunda-feira";
-            break;
-        case 2:
-            diaDaSemana = "terça-feira";
-            break;
-        case 3:
-            diaDaSemana = "quarta-feira";
-            break;
-        case 4:
-            diaDaSemana = "quinta-feira";
-            break;
-        case 5:
-            diaDaSemana = "sexta-feira";
-            break;
-        case 6:
-            diaDaSemana = "sábado";
-    }
+    var diasDaSemana = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado']
 
-    //Acessa o valor de dia do mes
-    diaDoMes = date.getDate();
-
-    //Verifica qual o atual mes do ano e retorna por escrito
-    mes = date.getMonth();
-    switch (mes) {
-        case 0:
-            mes = "janeiro";
-            break;
-        case 1:
-            mes = "fevereiro";
-            break;
-        case 2:
-            mes = "março";
-            break;
-        case 3:
-            mes = "abril";
-            break;
-        case 4:
-            mes = "maio";
-            break;
-        case 5:
-            mes = "junho";
-            break;
-        case 6:
-            mes = "julho";
-        case 7:
-            mes = "agosto";
-            break;
-        case 8:
-            mes = "setembro";
-            break;
-        case 9:
-            mes = "outubro";
-            break;
-        case 10:
-            mes = "novembro";
-            break;
-        case 11:
-            mes = "dezembro";
-            break;
-    }
-
-    //Acessa o valor de ano
-    ano = date.getFullYear();
+    var meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+    
 
     //Mostra no DOM
-    data.textContent = `${diaDaSemana}, ${diaDoMes} de ${mes} de ${ano}`
+    data.textContent = `${diasDaSemana[date.getDay()]}, ${date.getDate()} de ${meses[date.getMonth()]} de ${date.getFullYear()}`
 }
 
 //Chama as funções

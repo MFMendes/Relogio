@@ -20,7 +20,7 @@ function relogio () {
     ssFormatado = ss < 10 ? "0" + ss : ss;
 
     //Mostra no DOM
-    horario.textContent = `${hhFormatado} : ${mmFormatado} : ${ssFormatado}`;
+    horario.textContent = `${hhFormatado}:${mmFormatado}:${ssFormatado}`;
     
     //Executa a função 'relogio()' a cada segundo
     let tempo = setTimeout(() => {

@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Russo One', sans-serif;
 }
 
 body {
@@ -15,10 +14,23 @@ body {
     align-items: center;
 }
 
-#main {
-    
+#titulo {
+    position: fixed;
+    top: 0;
+    left: 10vw;
+    padding: 15px 25px;
+    background-color: #CC3355;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #relogio {
     font-size: 10vw;
+    font-family: 'Russo One', sans-serif;
+}
+
+#data {
+    font-family: 'Russo One', sans-serif;
 }
